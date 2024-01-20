@@ -126,7 +126,7 @@ const BlogPost = ({ post }) => (
 
 BlogPost.getInitialProps = async ({ req, query }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch(`https://jazz-for-cows.vercel.app//api/post/${query.postId}`);
+  const res = await fetch(`https://jazz-for-cows-git-master-berkarslanns-projects.vercel.app//api/post/${query.postId}`);
   const json = await res.json();
   return { post: json.post };
 };
