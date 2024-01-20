@@ -3,7 +3,6 @@ import fetch from "isomorphic-unfetch";
 import Head from "next/head";
 import Link from "next/link";
 
-
 const Home = ({ posts }) => (
   <div className="container">
     <Head>
@@ -17,9 +16,10 @@ const Home = ({ posts }) => (
 
     <div className="hero">
       <div>
-        <Link href="/" style={{ textDecoration: "none" }}>
+        <a href="/" style={{ textDecoration: "none" }}>
           <h1 className="hero-title">Jazz for Cows</h1>
-        </Link>
+        </a>
+
         <div className="hero-container">
           <h4 className="hero-subtitle">by Oral Berk Arslan</h4>
 
@@ -32,28 +32,27 @@ const Home = ({ posts }) => (
       </div>
     </div>
 
-     {posts.map((post) => (  
+    {posts.map((post) => (
       <div className="blog">
-         <h2 className="blog-title">
-           <a className="blog-title-link" href={post.slug}>
-          <h1>{post.title}</h1>
+        <h2 className="blog-title">
+          <a className="blog-title-link" href={post.slug}>
+            <h1>{post.title}</h1>
           </a>
         </h2>
         <div
           className="blog-text"
           dangerouslySetInnerHTML={{ __html: post.subtitle }}
         />
-         <div className="blog-date">{post.date}</div>
-     </div>
-     ))}
-     <hr></hr>
-     <a href="/aboutme">
-       <footer className="hero-footer">Contact</footer>
-      
+        <div className="blog-date">{post.date}</div>
+      </div>
+    ))}
+    <hr></hr>
+    <a href="/aboutme">
+      <footer className="hero-footer">Contact</footer>
     </a>
-     <div className="pic-container">
-   <img src="/assets/jazzforcows.png" alt="Foto" className="pic" />
-   </div>
+    <div className="pic-container">
+      <img src="/assets/jazzforcows.png" alt="Foto" className="pic" />
+    </div>
 
     <style jsx>{`
       :global(body) {

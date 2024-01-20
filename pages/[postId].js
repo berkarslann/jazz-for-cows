@@ -4,25 +4,24 @@ import Head from "next/head";
 import Link from "next/link";
 // import ReactMarkdown from "react-markdown";
 
-
-
 const BlogPost = ({ post }) => (
   //blog post
   <div className="container">
     <Head>
-      <title>Home</title>
+      <title>Jazz for Cows - A blog by Berk</title>
       <link rel="icon" href="/favicon.ico" />
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       />
     </Head>
-
     <div className="hero">
       <div>
-      <Link href="/" style={{ textDecoration: 'none' }}>
+        <a href="/" style={{ textDecoration: "none" }}>
           <h1 className="hero-title">Jazz for Cows</h1>
-        </Link>        <div className="hero-container">
+        </a>
+
+        <div className="hero-container">
           <h4 className="hero-subtitle">by Oral Berk Arslan</h4>
 
           <div className="profile-picture">
@@ -31,18 +30,15 @@ const BlogPost = ({ post }) => (
         </div>
       </div>
     </div>
-
     <div className="blog">
       <h1 className="blog-title-link">{post.title}</h1>
       <div className="blog-date">{post.date}</div>
       {/* <div className="blog-text" dangerouslySetInnerHTML={{ __html: marked(post.details) }} /> */}
       <div
-          className="blog-text"
-          dangerouslySetInnerHTML={{ __html: post.details }}
-        />
-
+        className="blog-text"
+        dangerouslySetInnerHTML={{ __html: post.details }}
+      />
     </div>
-
     <style jsx>{`
       :global(body) {
         background-color: #292c34;
@@ -80,8 +76,7 @@ const BlogPost = ({ post }) => (
         margin: 12px 0 48px 0;
         text-decoration: none;
         font-size: 15px;
-        font-family: 'Montserrat', sans-serif;
-
+        font-family: "Montserrat", sans-serif;
       }
       .blog-title-link {
         font-size: 35px;
@@ -95,7 +90,6 @@ const BlogPost = ({ post }) => (
         color: #e5e5e6;
         font-family: "Montserrat", sans-serif;
         line-height: 1.7;
-
       }
 
       a {
@@ -126,12 +120,15 @@ const BlogPost = ({ post }) => (
         align-items: center;
       }
     `}</style>
-  // </div>
+    //{" "}
+  </div>
 );
 
 BlogPost.getInitialProps = async ({ req, query }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch(`https://jazz-for-cows-berkarslanns-projects.vercel.app/api/post/${query.postId}`);
+  const res = await fetch(
+    `https://jazz-for-cows-berkarslanns-projects.vercel.app/api/post/${query.postId}`
+  );
   const json = await res.json();
   return { post: json.post };
 };
