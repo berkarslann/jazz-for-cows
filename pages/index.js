@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 
 const Home = ({ posts }) => (
   <div className="container">
-    <Head>
+    {/* <Head>
       <title>Jazz for Cows - A blog by Berk</title>
       <link rel="icon" href="/favicon.ico" />
       <link
@@ -52,7 +52,7 @@ const Home = ({ posts }) => (
     </a>
     <div className="pic-container">
     <img src="/assets/jazzforcows.png" alt="Foto" className="pic" />
-    </div>
+    </div> */}
 
 
     <style jsx>{`
@@ -160,11 +160,11 @@ const Home = ({ posts }) => (
   </div>
 );
 
-Home.getInitialProps = async ({ req }) => {
-  // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch("https://jazz-for-cows-git-master-berkarslanns-projects.vercel.app//api/posts");
-  const json = await res.json();
-  return { posts: json.posts };
-};
+// Home.getInitialProps = async ({ req }) => {
+//   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
+//   const res = await fetch("https://jazz-for-cows-git-master-berkarslanns-projects.vercel.app//api/posts");
+//   const json = await res.json();
+//   return { posts: json.posts };
+// };
 
 export default Home;
