@@ -7,16 +7,16 @@ import Link from "next/link";
 const BlogPost = ({ post }) => (
   //blog post
   <div className="container">
-    {/* <Head>
+    <Head>
       <title>Home</title>
       <link rel="icon" href="/favicon.ico" />
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       />
-    </Head> */}
+    </Head>
 
-    {/* <div className="hero">
+    <div className="hero">
       <div>
       <Link href="/" style={{ textDecoration: 'none' }}>
           <h1 className="hero-title">Jazz for Cows</h1>
@@ -35,8 +35,8 @@ const BlogPost = ({ post }) => (
       <div className="blog-date">{post.date}</div>
       <div className="blog-text">
         <ReactMarkdown source={post.details} />
-      </div> */}
-    {/* </div> */}
+      </div>
+    </div>
 
     <style jsx>{`
       :global(body) {
@@ -124,11 +124,11 @@ const BlogPost = ({ post }) => (
   </div>
 );
 
-// BlogPost.getInitialProps = async ({ req, query }) => {
-//   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-//   const res = await fetch(`https://jazz-for-cows-git-master-berkarslanns-projects.vercel.app//api/post/${query.postId}`);
-//   const json = await res.json();
-//   return { post: json.post };
-// };
+BlogPost.getInitialProps = async ({ req, query }) => {
+  // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
+  const res = await fetch(`https://jazz-for-cows-berkarslanns-projects.vercel.app/api/post/${query.postId}`);
+  const json = await res.json();
+  return { post: json.post };
+};
 
 export default BlogPost;
