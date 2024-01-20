@@ -5,7 +5,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
 const BlogPost = ({ post }) => (
-  //blogpost
+  //blog post
   <div className="container">
     <Head>
       <title>Home</title>
