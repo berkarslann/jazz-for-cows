@@ -3,6 +3,7 @@ import fetch from "isomorphic-unfetch";
 import Head from "next/head";
 import Link from "next/link";
 // import ReactMarkdown from "react-markdown";
+import marked from "marked"; // marked kütüphanesini ekledik
 
 const Home = ({ posts }) => (
   <div className="container">
@@ -40,7 +41,7 @@ const Home = ({ posts }) => (
           </a>
         </h2>
        <div className="blog-text">
-         <a source={post.subtitle} />
+       <div className="blog-text" dangerouslySetInnerHTML={{ __html: marked(post.subtitle) }} />
          </div>
          <div className="blog-date">{post.date}</div>
      </div>
