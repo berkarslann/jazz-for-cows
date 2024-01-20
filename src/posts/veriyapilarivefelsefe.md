@@ -28,7 +28,7 @@ Bana öğelerimi saklayabileceğim bir yapı lazım. Bu yapıda öğelerimi sakl
 
 Basitleştirmek adına burada bilgisayardan bir kutu talep ediyoruz. Ama ne dedik, bilgisayarın bunu algılama biçimi kısıtlı. Bize ögelerimizi saklayabileceğimiz bir kutu verirken bazı engellere takılıyoruz. Mesela bu kutuda öğelerimizi ancak belli bir index referansıyla saklayabiliyoruz. 0,1,2,3.. diye indexler var ve sırayla değerlerimizi buraya atıyoruz. Tamam şu anlık gayet makul ve matematiğe uygun. Ancak bilgisayardan bize geri versin diye veri talep ettiğimizde, yapımızın basitliği ortaya çıkacak. Sorun şu ki zaman geçtikçe herhangi bir indexteki veriyi bize getirip vermesini beklerken sıkılıyoruz, bu yapı da ne kadar hantal diyoruz. Bunu demesek bile (ki demeyebiliriz çünkü verimsiz olduğunu seziyle anlıyoruz, işimizi hızlı görse bile ondan sıkılıyoruz) geliştirebilecek bir şeyler olduğunu hissediyoruz.
 
-![Örnek Resim](/assets/veriyapilarivefelsefe/array.png)
+![Örnek Resim](/public/assets/veriyapilarivefelsefe/array.png)
 
 Peki aşağıdaki kodda ne yapıyoruz?
 
@@ -52,12 +52,12 @@ data=d;
 
 Evet bu basitçe bir linked list. Yani bir liste, ama her değer kendisinden sonra gelen değerin nerde olduğunu biliyor. Yani değerimiz ve bir sonraki değeri tutan referansımız var.
 
-![Örnek Resim](/assets/veriyapilarivefelsefe/linkedlist.png)
+![Örnek Resim](/public/assets/veriyapilarivefelsefe/linkedlist.png)
 
 
 Yani indexlerle çalışmak yerine her bir değerimiz başka bir değerin referansını tutuyor. (İndex referans sistemini burada da kullanıyoruz diyebiliriz tabii. Ancak burada dikkat çekmek istediğim şey ‘pointer’ mantığı)
 
-![Örnek Resim](/assets/veriyapilarivefelsefe/linkedlistarray.png)
+![Örnek Resim](/public/assets/veriyapilarivefelsefe/linkedlistarray.png)
 
 
 
