@@ -3,8 +3,15 @@ import fetch from "isomorphic-unfetch";
 import Head from "next/head";
 import Link from "next/link";
 // import ReactMarkdown from "react-markdown";
-
+const convertMarkdownToHTML = (markdown) => {
+  const lines = markdown.split('\n');
+  const htmlContent = lines.map(line => `<p>${line}</p>`).join('');
+  return htmlContent;
+};
+const htmlContent = convertMarkdownToHTML(post.details);
 const BlogPost = ({ post }) => (
+
+
   //blog post
   <div className="container">
     <Head>
@@ -34,10 +41,14 @@ const BlogPost = ({ post }) => (
       <h1 className="blog-title-link">{post.title}</h1>
       <div className="blog-date">{post.date}</div>
       {/* <div className="blog-text" dangerouslySetInnerHTML={{ __html: marked(post.details) }} /> */}
-      <div
+      {/* <div
         className="blog-text"
         dangerouslySetInnerHTML={{ __html: post.details }}
-      />
+      /> */}
+       <div
+          className="blog-text"
+          dangerouslySetInnerHTML={{ __html: htmlContent }}
+        />
       {/* <div className="blog-text">{post.details}</div> */}
     </div>
     <style jsx>{`
