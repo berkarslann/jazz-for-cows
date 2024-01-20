@@ -2,8 +2,7 @@ import React from "react";
 import fetch from "isomorphic-unfetch";
 import Head from "next/head";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
-// import marked from "marked"; // marked kütüphanesini ekledik
+
 
 const Home = ({ posts }) => (
   <div className="container">
@@ -40,9 +39,10 @@ const Home = ({ posts }) => (
           <h1>{post.title}</h1>
           </a>
         </h2>
-       <div className="blog-text">
-         <ReactMarkdown source={post.subtitle} />
-         </div>
+        <div
+          className="blog-text"
+          dangerouslySetInnerHTML={{ __html: post.subtitle }}
+        />
          <div className="blog-date">{post.date}</div>
      </div>
      ))}
