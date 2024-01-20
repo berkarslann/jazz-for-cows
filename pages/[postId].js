@@ -56,7 +56,7 @@ const BlogPost = ({ post }) => (
       <div className="blog-date">{post.date}</div>
       {/* <div className="blog-text" dangerouslySetInnerHTML={{ __html: marked(post.details) }} /> */}
       <div className="blog-text" dangerouslySetInnerHTML={convertMarkdownToHTML(post.details)} />
-
+      
       {/* <div className="blog-text">{post.details}</div> */}
     </div>
     <style jsx>{`
