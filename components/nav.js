@@ -26,9 +26,12 @@ const Nav = () => (
 
     <style jsx>{`
       :global(body) {
+        background-color:black;
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
           Helvetica, sans-serif;
+    
+          
       }
       nav {
         text-align: center;
@@ -45,7 +48,7 @@ const Nav = () => (
         padding: 6px 8px;
       }
       a {
-        color: #067df7;
+        
         text-decoration: none;
         font-size: 13px;
       }
