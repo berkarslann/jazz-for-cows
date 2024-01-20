@@ -16,7 +16,7 @@ export const getPosts = () => {
     // },
     {
       title: "Veri Yapıları ve Felsefe",
-      slug: "yarisma",
+      slug: "veriyapilarivefelsefe",
       subtitle: "Günümüz teknolojisine ilkel bir bakış.",
       details: require("./posts/veriyapilarivefelsefe.md").default,
       date: "30 Kasım 2023"
