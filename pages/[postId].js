@@ -6,37 +6,37 @@ import Link from "next/link";
 
 const BlogPost = ({ post }) => (
   //blog post
-  <div className="container">
-    <Head>
-      <title>Home</title>
-      <link rel="icon" href="/favicon.ico" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      />
-    </Head>
+  // <div className="container">
+  //   <Head>
+  //     <title>Home</title>
+  //     <link rel="icon" href="/favicon.ico" />
+  //     <link
+  //       rel="stylesheet"
+  //       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  //     />
+  //   </Head>
 
-    <div className="hero">
-      <div>
-      <Link href="/" style={{ textDecoration: 'none' }}>
-          <h1 className="hero-title">Jazz for Cows</h1>
-        </Link>        <div className="hero-container">
-          <h4 className="hero-subtitle">by Oral Berk Arslan</h4>
+  //   <div className="hero">
+  //     <div>
+  //     <Link href="/" style={{ textDecoration: 'none' }}>
+  //         <h1 className="hero-title">Jazz for Cows</h1>
+  //       </Link>        <div className="hero-container">
+  //         <h4 className="hero-subtitle">by Oral Berk Arslan</h4>
 
-          <div className="profile-picture">
-            <img src="/assets/obapic.jpg" alt="Profil Resmi" />
-          </div>
-        </div>
-      </div>
-    </div>
+  //         <div className="profile-picture">
+  //           <img src="/assets/obapic.jpg" alt="Profil Resmi" />
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
 
-    <div className="blog">
-      <h1 className="blog-title-link">{post.title}</h1>
-      <div className="blog-date">{post.date}</div>
-      <div className="blog-text">
-        <ReactMarkdown source={post.details} />
-      </div>
-    </div>
+  //   <div className="blog">
+  //     <h1 className="blog-title-link">{post.title}</h1>
+  //     <div className="blog-date">{post.date}</div>
+  //     <div className="blog-text">
+  //       <ReactMarkdown source={post.details} />
+  //     </div>
+  //   </div>
 
     <style jsx>{`
       :global(body) {
@@ -121,7 +121,7 @@ const BlogPost = ({ post }) => (
         align-items: center;
       }
     `}</style>
-  </div>
+  // </div>
 );
 
 BlogPost.getInitialProps = async ({ req, query }) => {

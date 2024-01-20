@@ -5,54 +5,54 @@ import Link from "next/link";
 // import ReactMarkdown from "react-markdown";
 
 const Home = ({ posts }) => (
-  <div className="container">
-    <Head>
-      <title>Jazz for Cows - A blog by Berk</title>
-      <link rel="icon" href="/favicon.ico" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      />
-    </Head>
+  // <div className="container">
+  //   <Head>
+  //     <title>Jazz for Cows - A blog by Berk</title>
+  //     <link rel="icon" href="/favicon.ico" />
+  //     <link
+  //       rel="stylesheet"
+  //       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  //     />
+  //   </Head>
 
-    <div className="hero">
-      <div>
-        <Link href="/" style={{ textDecoration: "none" }}>
-          <h1 className="hero-title">Jazz for Cows</h1>
-        </Link>
-        <div className="hero-container">
-          <h4 className="hero-subtitle">by Oral Berk Arslan</h4>
+  //   <div className="hero">
+  //     <div>
+  //       <Link href="/" style={{ textDecoration: "none" }}>
+  //         <h1 className="hero-title">Jazz for Cows</h1>
+  //       </Link>
+  //       <div className="hero-container">
+  //         <h4 className="hero-subtitle">by Oral Berk Arslan</h4>
 
-          <div className="profile-picture">
-            <a href="/aboutme">
-              <img src="/assets/obapic.jpg" alt="Profil Resmi" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  //         <div className="profile-picture">
+  //           <a href="/aboutme">
+  //             <img src="/assets/obapic.jpg" alt="Profil Resmi" />
+  //           </a>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
 
-    {posts.map((post) => (
-      <div className="blog">
-        <h2 className="blog-title">
-          <a className="blog-title-link" href={post.slug}>
-            <h1>{post.title}</h1>
-          </a>
-        </h2>
-        <div className="blog-text">
-          <ReactMarkdown source={post.subtitle} />
-        </div>
-        <div className="blog-date">{post.date}</div>
-      </div>
-    ))}
-    <hr></hr>
-    <a href="/aboutme">
-      <footer className="hero-footer">Contact</footer>
+  //   {posts.map((post) => (
+  //     <div className="blog">
+  //       <h2 className="blog-title">
+  //         <a className="blog-title-link" href={post.slug}>
+  //           <h1>{post.title}</h1>
+  //         </a>
+  //       </h2>
+  //       <div className="blog-text">
+  //         <ReactMarkdown source={post.subtitle} />
+  //       </div>
+  //       <div className="blog-date">{post.date}</div>
+  //     </div>
+  //   ))}
+  //   <hr></hr>
+  //   <a href="/aboutme">
+  //     <footer className="hero-footer">Contact</footer>
       
-    </a>
-    <div className="pic-container">
-    <img src="/assets/jazzforcows.png" alt="Foto" className="pic" />
-    </div>
+  //   </a>
+  //   <div className="pic-container">
+  //   <img src="/assets/jazzforcows.png" alt="Foto" className="pic" />
+  //   </div>
 
 
     <style jsx>{`
@@ -157,7 +157,7 @@ const Home = ({ posts }) => (
        
       }
     `}</style>
-  </div>
+  // </div>
 );
 
 Home.getInitialProps = async ({ req }) => {
