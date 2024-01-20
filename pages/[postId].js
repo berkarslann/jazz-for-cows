@@ -35,7 +35,11 @@ const BlogPost = ({ post }) => (
     <div className="blog">
       <h1 className="blog-title-link">{post.title}</h1>
       <div className="blog-date">{post.date}</div>
-      <div className="blog-text" dangerouslySetInnerHTML={{ __html: marked(post.details) }} />
+      {/* <div className="blog-text" dangerouslySetInnerHTML={{ __html: marked(post.details) }} /> */}
+      <div
+          className="blog-text"
+          dangerouslySetInnerHTML={{ __html: post.details }}
+        />
 
     </div>
 
