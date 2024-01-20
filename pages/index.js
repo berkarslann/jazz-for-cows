@@ -5,7 +5,7 @@ import Link from "next/link";
 // import ReactMarkdown from "react-markdown";
 
 const Home = ({ posts }) => (
-   <div className="container">
+  <div className="container">
     <Head>
       <title>Jazz for Cows - A blog by Berk</title>
       <link rel="icon" href="/favicon.ico" />
@@ -15,25 +15,25 @@ const Home = ({ posts }) => (
       />
     </Head>
 
-  /* //   <div className="hero">
-  //     <div>
-  //       <Link href="/" style={{ textDecoration: "none" }}>
-  //         <h1 className="hero-title">Jazz for Cows</h1>
-  //       </Link>
-  //       <div className="hero-container">
-  //         <h4 className="hero-subtitle">by Oral Berk Arslan</h4>
+    <div className="hero">
+      <div>
+        <Link href="/" style={{ textDecoration: "none" }}>
+          <h1 className="hero-title">Jazz for Cows</h1>
+        </Link>
+        <div className="hero-container">
+          <h4 className="hero-subtitle">by Oral Berk Arslan</h4>
 
-  //         <div className="profile-picture">
-  //           <a href="/aboutme">
-  //             <img src="/assets/obapic.jpg" alt="Profil Resmi" />
-  //           </a>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
+          <div className="profile-picture">
+            <a href="/aboutme">
+              <img src="/assets/obapic.jpg" alt="Profil Resmi" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-     {/* {posts.map((post) => (  */}
-  {/* /* //     <div className="blog">
+    {/* {posts.map((post) => (  */}
+    {/* /* //     <div className="blog">
   //       <h2 className="blog-title">
   //         <a className="blog-title-link" href={post.slug}>
   //           <h1>{post.title}</h1>
@@ -53,7 +53,6 @@ const Home = ({ posts }) => (
   //   <div className="pic-container">
   //   <img src="/assets/jazzforcows.png" alt="Foto" className="pic" />
 //   </div> */}
-
 
     <style jsx>{`
       :global(body) {
@@ -148,13 +147,11 @@ const Home = ({ posts }) => (
         margin: 9px;
         font-size: 20px;
       }
-      .pic-container{
-        text-align:center;
-      
+      .pic-container {
+        text-align: center;
       }
-      .pic{
-        width:60%; 
-       
+      .pic {
+        width: 60%;
       }
     `}</style>
   </div>
@@ -162,10 +159,12 @@ const Home = ({ posts }) => (
 
 Home.getInitialProps = async ({ req }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch("https://jazz-for-cows-berkarslanns-projects.vercel.app/api/posts");
+  const res = await fetch(
+    "https://jazz-for-cows-berkarslanns-projects.vercel.app/api/posts"
+  );
   const json = await res.json();
-  console.log(json)
-  return { posts: json.posts};
+  console.log(json);
+  return { posts: json.posts };
 };
 
 export default Home;
