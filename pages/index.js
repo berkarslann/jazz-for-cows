@@ -5,17 +5,17 @@ import Link from "next/link";
 // import ReactMarkdown from "react-markdown";
 
 const Home = ({ posts }) => (
-  // <div className="container">
-  //   <Head>
-  //     <title>Jazz for Cows - A blog by Berk</title>
-  //     <link rel="icon" href="/favicon.ico" />
-  //     <link
-  //       rel="stylesheet"
-  //       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-  //     />
-  //   </Head>
+   <div className="container">
+    <Head>
+      <title>Jazz for Cows - A blog by Berk</title>
+      <link rel="icon" href="/favicon.ico" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      />
+    </Head>
 
-  //   <div className="hero">
+  /* //   <div className="hero">
   //     <div>
   //       <Link href="/" style={{ textDecoration: "none" }}>
   //         <h1 className="hero-title">Jazz for Cows</h1>
@@ -32,8 +32,8 @@ const Home = ({ posts }) => (
   //     </div>
   //   </div>
 
-  //   {posts.map((post) => (
-  //     <div className="blog">
+     {/* {posts.map((post) => (  */}
+  {/* /* //     <div className="blog">
   //       <h2 className="blog-title">
   //         <a className="blog-title-link" href={post.slug}>
   //           <h1>{post.title}</h1>
@@ -52,7 +52,7 @@ const Home = ({ posts }) => (
   //   </a>
   //   <div className="pic-container">
   //   <img src="/assets/jazzforcows.png" alt="Foto" className="pic" />
-  //   </div>
+//   </div> */}
 
 
     <style jsx>{`
@@ -157,7 +157,7 @@ const Home = ({ posts }) => (
        
       }
     `}</style>
-  // </div>
+  </div>
 );
 
 Home.getInitialProps = async ({ req }) => {
