@@ -4,19 +4,17 @@ import Head from "next/head";
 import Link from "next/link";
 // import ReactMarkdown from "react-markdown";
 const convertMarkdownToHTML = (markdown) => {
-  // Satırları ayrıştır
+  
   const lines = markdown.split('\n');
 
-  // Satırları dönüşüm yaparak birleştir
   const htmlContent = lines.map(line => {
-    // Resim etiketini kontrol et
+  
     const match = line.match(/!\[image\]\((.*?)\)/);
     if (match) {
       const imageUrl = match[1];
       return `<img src="${imageUrl}" alt="Image" />`;
     }
 
-    // Normal paragraf etiketi
     return `<p>${line}</p>`;
   }).join('');
 
@@ -140,7 +138,7 @@ const BlogPost = ({ post }) => (
         align-items: center;
       }
     `}</style>
-    //{" "}
+    
   </div>
 );
 
