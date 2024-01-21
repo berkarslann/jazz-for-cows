@@ -4,14 +4,18 @@ import Head from "next/head";
 import Link from "next/link";
 // import ReactMarkdown from "react-markdown";
 const convertMarkdownToHTML = (markdown) => {
-  
+
   const lines = markdown.split('\n');
 
   const htmlContent = lines.map(line => {
-  
-    const match = line.match(/!\[image\]\((.*?)\)/);
-    if (match) {
-      const imageUrl = match[1];
+
+    // İçinde ** veya __ olanları kalın yazıya çevir.
+    line = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    line = line.replace(/__(.*?)__/g, '<strong>$1</strong>');
+
+    const matchImage = line.match(/!\[image\]\((.*?)\)/);
+    if (matchImage) {
+      const imageUrl = matchImage[1];
       return `<img src="${imageUrl}" alt="Image" style="width: 25rem; "/>`;
     }
 
