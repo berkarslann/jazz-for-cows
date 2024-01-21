@@ -7,13 +7,13 @@ export const getPosts = () => {
     //   details: require("./posts/merhaba.md").default,
     //   date: "30 Aralık 2019"
     // },
-    // {
-    //   title: "Yazılım Öğrenmeye Hangi Dil ile Başlamalıyım?",
-    //   slug: "ornek-yazi",
-    //   subtitle: "Hayır, bu düşündüğün kadar önemli bir karar değil.",
-    //   details: require("./posts/ornek-yazi.md").default,
-    //   date: "3 Aralık 2019"
-    // },
+    {
+      title: "Yazılım Öğrenmeye Hangi Dil ile Başlamalıyım?",
+      slug: "yazilimögrenmeyehangidillebaslamaliyim",
+      subtitle: "Hayır, bu düşündüğün kadar önemli bir soru değil.",
+      details: require("./posts/yazilimögrenmeyehangidillebaslamaliyim.md").default,
+      date: "21 Ocak 2024"
+    },
     {
       title: "Veri Yapıları ve Felsefe",
       slug: "veriyapilarivefelsefe",
