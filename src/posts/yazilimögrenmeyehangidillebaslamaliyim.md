@@ -21,7 +21,7 @@ Git gibi versiyon kontrol sistemlerini öğrenin. Kodumuzu yazmadan önce yönet
 **4. Temel WEB Teknolojilerini Öğrenin**
 Evet bir sonraki adımda **HTML, CSS ve JavaScript** öğrenmeniz gerektiğini düşünüyorum. Özellikle ilk adımda JavaScripti kullanmıyoruz çünkü birçok kişinin düşündüğünün aksine JavaScript'in programlamaya yaklaşımı biraz farklı. JavaScripti iyi anlamak için programlamanın temellerini iyi öğrenmiş olmalıyız. Bu adımda eğer web programlamaya ilginiz olduğunu farkederseniz herhangi bir JavaScript frameworkü seçerek öğrenmenize devam edebilirsiniz.
 
-**5. Veritabanları Hakkında**
+**5. Veritabanları Hakkında Bilgi Edinin**
 Temel veritabanı kavramlarını öğrenin. İlişkisel veritabanları kullanarak geliştirmeler yapın. Bu, veriler arasındaki ilişkiyi kavramanıza yardımcı olur.
 
 Bu 5 adımı tamamladığınızda programlamanın temellerini öğrenmiş oluyorsunuz. İşin güzel tarafı, bu adımları tamamladıktan sonra istediğiniz programlama dilini veya istediğiniz teknolojiyi öğrenmek artık daha kolay hale geliyor.

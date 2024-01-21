@@ -9,9 +9,11 @@ const convertMarkdownToHTML = (markdown) => {
 
   const htmlContent = lines.map(line => {
 
-    // İçinde ** veya __ olanları kalın yazıya çevir.
     line = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     line = line.replace(/__(.*?)__/g, '<strong>$1</strong>');
+    
+    line = line.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    line = line.replace(/_(.*?)_/g, '<em>$1</em>');
 
     const matchImage = line.match(/!\[image\]\((.*?)\)/);
     if (matchImage) {
@@ -24,6 +26,7 @@ const convertMarkdownToHTML = (markdown) => {
 
   return { __html: htmlContent };
 };
+
 
 
 
