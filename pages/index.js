@@ -157,15 +157,7 @@ const Home = ({ posts }) => (
   </div>
 );
 
-// Home.getInitialProps = async ({ req }) => {
-//   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-//   const res = await fetch(
-//     "https://jazz-for-cows-berkarslanns-projects.vercel.app/api/posts"
-//   );
-//   const json = await res.json();
-//   console.log(json);
-//   return { posts: json.posts };
-// };
+
 
 Home.getInitialProps = async ({ req }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
@@ -176,5 +168,12 @@ Home.getInitialProps = async ({ req }) => {
   console.log(json);
   return { posts: json.posts };
 };
+// Home.getInitialProps = async ({ req }) => {
+//   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
+//   const res = await fetch("http://localhost:3000/api/posts");
+//   const json = await res.json();
+//   return { posts: json.posts };
+// };
+
 
 export default Home;

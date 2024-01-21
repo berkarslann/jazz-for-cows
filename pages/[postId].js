@@ -12,7 +12,7 @@ const convertMarkdownToHTML = (markdown) => {
     const match = line.match(/!\[image\]\((.*?)\)/);
     if (match) {
       const imageUrl = match[1];
-      return `<img src="${imageUrl}" alt="Image" />`;
+      return `<img src="${imageUrl}" alt="Image" style="width: 25rem; "/>`;
     }
 
     return `<p>${line}</p>`;
@@ -137,6 +137,24 @@ const BlogPost = ({ post }) => (
         justify-content: center;
         align-items: center;
       }
+      @media only screen and (max-width: 600px) {
+        .hero-title {
+          font-size: 36px;
+        }
+      
+        .hero-subtitle {
+          font-size: 18px;
+        }
+     
+        .blog-title-link {
+          font-size: 28px;
+        }
+      }
+      .container{
+        margin: 0 auto;
+        padding:1rem;
+        width: 100%;
+      }
     `}</style>
     
   </div>
@@ -150,5 +168,13 @@ BlogPost.getInitialProps = async ({ req, query }) => {
   const json = await res.json();
   return { post: json.post };
 };
+// BlogPost.getInitialProps = async ({ req, query }) => {
+//   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
+//   const res = await fetch(
+//     `http://localhost:3000/api/post/${query.postId}`
+//   );
+//   const json = await res.json();
+//   return { post: json.post };
+// };
 
 export default BlogPost;
