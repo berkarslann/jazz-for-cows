@@ -170,7 +170,7 @@ const Home = ({ posts }) => (
 Home.getInitialProps = async ({ req }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
   const res = await fetch(
-    "https://jazzforcows.com/api/posts"
+    "https://jazz-for-cows-aec9c4ffb37b.herokuapp.com/api/posts"
   );
   const json = await res.json();
   console.log(json);

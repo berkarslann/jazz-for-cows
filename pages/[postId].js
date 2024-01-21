@@ -145,7 +145,7 @@ const BlogPost = ({ post }) => (
 BlogPost.getInitialProps = async ({ req, query }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
   const res = await fetch(
-    `https://jazzforcows.com/api/post/${query.postId}`
+    `https://jazz-for-cows-aec9c4ffb37b.herokuapp.com/api/post/${query.postId}`
   );
   const json = await res.json();
   return { post: json.post };
