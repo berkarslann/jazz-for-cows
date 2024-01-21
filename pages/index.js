@@ -157,10 +157,20 @@ const Home = ({ posts }) => (
   </div>
 );
 
+// Home.getInitialProps = async ({ req }) => {
+//   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
+//   const res = await fetch(
+//     "https://jazz-for-cows-berkarslanns-projects.vercel.app/api/posts"
+//   );
+//   const json = await res.json();
+//   console.log(json);
+//   return { posts: json.posts };
+// };
+
 Home.getInitialProps = async ({ req }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
   const res = await fetch(
-    "https://jazz-for-cows-berkarslanns-projects.vercel.app/api/posts"
+    "https://jazzforcows/api/posts"
   );
   const json = await res.json();
   console.log(json);
