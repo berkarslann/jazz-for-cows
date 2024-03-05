@@ -24,7 +24,7 @@ export const getPosts = () => {
     {
       title: "Öğrenme Kavramı Üzerine 3 Prensip",
       slug: "ogrenmekavramiuzerine3prensip",
-      subtitle: "Zamanla zor olanın basit olanı yapmak olduğunu anladım.",
+      subtitle: "Zamanla zor olanın basit olanı yapmak olduğunu anladım",
       details: require("./posts/ogrenmekavramiuzerine3prensip.md").default,
       date: "5 Mart 2024"
     }
