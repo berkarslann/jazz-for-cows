@@ -8,6 +8,13 @@ export const getPosts = () => {
     //   date: "30 Aralık 2019"
     // },
     {
+      title: "Öğrenme Kavramı Üzerine 3 Prensip",
+      slug: "ogrenmekavramiuzerine3prensip",
+      subtitle: "Zamanla zor olanın basit olanı yapmak olduğunu anladım.",
+      details: require("./posts/ogrenmekavramiuzerine3prensip.md").default,
+      date: "5 Mart 2024"
+    },
+    {
       title: "Yazılım Öğrenmeye Hangi Dil ile Başlamalıyım?",
       slug: "yazilimögrenmeyehangidillebaslamaliyim",
       subtitle: "Hayır, bu düşündüğün kadar önemli bir soru değil.",
@@ -20,13 +27,7 @@ export const getPosts = () => {
       subtitle: "Günümüz teknolojisine ilkel bir bakış.",
       details: require("./posts/veriyapilarivefelsefe.md").default,
       date: "30 Kasım 2023"
-    },
-    {
-      title: "Öğrenme Kavramı Üzerine 3 Prensip",
-      slug: "ogrenmekavramiuzerine3prensip",
-      subtitle: "Zamanla zor olanın basit olanı yapmak olduğunu anladım",
-      details: require("./posts/ogrenmekavramiuzerine3prensip.md").default,
-      date: "5 Mart 2024"
     }
+
   ];
 };
