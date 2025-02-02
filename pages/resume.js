@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
 import resume from '../public/assets/resume.png';
 import logo from '../public/assets/logo.png'
 
@@ -83,7 +83,7 @@ const styles = {
 };
 
 const Navbar = () => {
-  const location = useLocation();
+  const location = useRouter();
 
   return (
     <div style={styles.navbar}>
