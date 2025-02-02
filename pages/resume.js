@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import resume from '../public/assets/resume.png';
 import logo from '../public/assets/logo.png'
 import Link from "next/link";
-
 
 const styles = {
   container: {
@@ -83,8 +82,16 @@ const styles = {
   }
 };
 
+// ✅ `useRouter` sadece istemci tarafında çalışacak şekilde düzeltildi
 const Navbar = () => {
-  const location = useRouter();
+  const router = useRouter();
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentPath(router.pathname);
+    }
+  }, [router.pathname]);
 
   return (
     <div style={styles.navbar}>
@@ -95,7 +102,7 @@ const Navbar = () => {
         href="/tutorials"
         style={{
           ...styles.link,
-          ...(location.pathname === "/tutorials" ? styles.activeLink : {}),
+          ...(currentPath === "/tutorials" ? styles.activeLink : {}),
         }}
       >
         İçerikler
@@ -110,14 +117,23 @@ const Navbar = () => {
   );
 };
 
+// ✅ `window` kullanımı sadece istemci tarafında çalışacak şekilde düzeltildi
 const ResumeForm = () => {
+  const [iframeStyle, setIframeStyle] = useState(styles.iframe);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIframeStyle(window.innerWidth <= 600 ? styles.mobileIframe : styles.iframe);
+    }
+  }, []);
+
   return (
     <div style={styles.iframeWrapper}>
       <iframe
         src="https://90481891.sibforms.com/serve/MUIFAA3TtJfbrF304IdRf1P8gDCZsH70jSNTjR1SghJ67VIC2AsWCCpYEe0yBeozjRB0bBFhlsu0V5VfrKhBxAJxSSuFa6YVqroJEvT72R7ittcIK-8uoRPoLl3_iisBxoWINtQSgvp8pIO0XSRCu9zaNAipT2R0BcLEYgoo_el8pYyDPCMjcCzAZK1UbIvGbt4diHTLzK8e74Kn"
         scrolling="no"
         allowFullScreen
-        style={window.innerWidth <= 600 ? styles.mobileIframe : styles.iframe}
+        style={iframeStyle}
       ></iframe>
     </div>
   );
