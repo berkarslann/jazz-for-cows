@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import "../styles/global.css"; // CSS dosyasını dahil et
 
 const Navbar = () => {
   const router = useRouter();
@@ -57,13 +56,103 @@ const ResumeForm = () => {
 
 const ResumePage = () => {
   return (
-    <div className="container">
-      <Navbar />
-      <div className="hero-section">
-        <ResumeForm />
-        <Image src="/assets/resume.png" alt="Resume" width={400} height={400} />
+    <>
+      <div className="container">
+        <Navbar />
+        <div className="hero-section">
+          <ResumeForm />
+          <Image src="/assets/resume.png" alt="Resume" width={400} height={400} />
+        </div>
       </div>
-    </div>
+
+      {/* ✅ CSS Kodu Doğrudan Burada */}
+      <style jsx>{`
+        /* Genel Stil */
+        body {
+          background-color: #f5f5f5;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 1rem 2rem;
+          background-color: #333;
+        }
+
+        .navbar a {
+          text-decoration: none;
+          margin: 0 1rem;
+          color: white;
+          font-size: 1.2rem;
+        }
+
+        .navbar .active {
+          color: #9d7af7;
+        }
+
+        .donate-button {
+          background-color: #9d7af7;
+          color: white;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        /* İçerik Alanı */
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          min-height: 100vh;
+          box-sizing: border-box;
+          padding: 3rem;
+          overflow: hidden;
+        }
+
+        /* Hero Bölümü */
+        .hero-section {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: row;
+          margin-top: 5rem;
+        }
+
+        @media (max-width: 768px) {
+          .hero-section {
+            flex-direction: column;
+          }
+        }
+
+        /* iFrame */
+        .iframe-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          width: 40rem;
+          max-width: 600px;
+          height: 500px;
+          margin-right: 2rem;
+        }
+
+        @media (max-width: 600px) {
+          .iframe-wrapper {
+            width: 28rem;
+            height: 430px;
+          }
+        }
+      `}</style>
+    </>
   );
 };
 
