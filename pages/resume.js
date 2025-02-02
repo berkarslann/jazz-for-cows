@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import resume from '../public/assets/resume.png';
 import logo from '../public/assets/logo.png'
+import Link from "next/link";
 
 
 const styles = {
@@ -87,11 +88,11 @@ const Navbar = () => {
 
   return (
     <div style={styles.navbar}>
-      <Link to="/" style={{ textDecoration: "none" }}>
+      <Link href="/" style={{ textDecoration: "none" }}>
         <img src={logo} alt="Logo" style={styles.img} />
       </Link>
       <Link
-        to="/tutorials"
+        href="/tutorials"
         style={{
           ...styles.link,
           ...(location.pathname === "/tutorials" ? styles.activeLink : {}),
