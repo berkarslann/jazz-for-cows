@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import resume from '../public/assets/resume.png';
-import logo from '../public/assets/logo.png'
+import logo from '../public/assets/logo.png';
 import Link from "next/link";
 
 const styles = {
