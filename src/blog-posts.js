@@ -14,13 +14,7 @@ export const getPosts = () => {
       details: require("./posts/ogrenmekavramiuzerine3prensip.md").default,
       date: "5 Mart 2024"
     },
-    {
-      title: "Yazılım Öğrenmeye Hangi Dil ile Başlamalıyım?",
-      slug: "yazilimögrenmeyehangidillebaslamaliyim",
-      subtitle: "Hayır, bu düşündüğün kadar önemli bir soru değil.",
-      details: require("./posts/yazilimögrenmeyehangidillebaslamaliyim.md").default,
-      date: "21 Ocak 2024"
-    },
+  
     {
       title: "Veri Yapıları ve Felsefe",
       slug: "veriyapilarivefelsefe",
