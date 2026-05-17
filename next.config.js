@@ -1,10 +1,15 @@
-module.exports = {
-  webpack: config => {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  turbopack: {},
+
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
-      use: "raw-loader"
+      use: "raw-loader",
     });
 
     return config;
-  }
+  },
 };
+
+module.exports = nextConfig;
