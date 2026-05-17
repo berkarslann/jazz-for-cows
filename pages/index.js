@@ -159,10 +159,12 @@ const Home = ({ posts }) => (
 
 
 
-Home.getInitialProps = async () => {
-  const res = await fetch(
-    "https://jazz-for-cows.vercel.app/api/posts"
-  );
+Home.getInitialProps = async ({ req }) => {
+  const baseUrl = req
+    ? `https://${req.headers.host}`
+    : "";
+
+  const res = await fetch(`${baseUrl}/api/posts`);
 
   const json = await res.json();
 

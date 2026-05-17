@@ -168,20 +168,17 @@ const BlogPost = ({ post }) => (
 );
 
 BlogPost.getInitialProps = async ({ req, query }) => {
-  // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
+  const baseUrl = req
+    ? `https://${req.headers.host}`
+    : "";
+
   const res = await fetch(
-    `https://jazz-for-cows-aec9c4ffb37b.herokuapp.com/api/post/${query.postId}`
+    `${baseUrl}/api/post/${query.postId}`
   );
+
   const json = await res.json();
+
   return { post: json.post };
 };
-// BlogPost.getInitialProps = async ({ req, query }) => {
-//   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-//   const res = await fetch(
-//     `http://localhost:3000/api/post/${query.postId}`
-//   );
-//   const json = await res.json();
-//   return { post: json.post };
-// };
 
 export default BlogPost;
